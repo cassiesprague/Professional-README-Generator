@@ -9,7 +9,7 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
 const utils = require("util");
-const genMkdn = require("utils/generateMarkdown.js");
+const genMkdn = require("./utils/generateMarkdown.js");
 
 
 // TODO: Create an array of questions for user input
@@ -101,7 +101,7 @@ function writeToFile(fileName, data) {
 // TODO: Create a function to initialize app
 //Used same link as above to try to get this to work. Still working on
 function init() {
-    inquirer.createPromptModule(questions).then((responses -> {
+    inquirer.createPromptModule(questions).then((responses) => {
         console.log("Creating Professional README.md File");
         writeToFile("PRF", generateMarkdown({...responces}));
     })
