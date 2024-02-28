@@ -6,9 +6,9 @@
 // https://www.w3schools.com/nodejs/nodejs_modules.asp
 // https://www.w3schools.com/nodejs/nodejs_url.asp
 
-const inquirer = requirer("inquirer");
+const inquirer = require("inquirer");
 const fs = require("fs");
-const utils = reauire("util");
+const utils = require("util");
 const genMkdn = require(".utils/generateMarkdown");
 
 
@@ -90,7 +90,13 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// Below is the link to the video I used to help me get this function. I am currently not sure if
+// this is even going to workerData, but I will try it out. If it doesnt work I will try another way.
+// https://www.youtube.com/watch?v=9YivEQFpmHQ
+
+function writeToFile(fileName, data) {
+    return fs.writeFileSync(util.join(process.cwd().fileName).data);
+}
 
 // TODO: Create a function to initialize app
 function init() {}
