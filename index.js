@@ -75,6 +75,17 @@ const questions = [
         message: "Did you write tests for your project? If so, describe here how to run them.",
         name: "tests",
     }
+    {
+        type: "input",
+        message: "What is your GitHub username?",
+        name: "username",
+    }
+    {
+        type: "input",
+        message: "What is your email address?",
+        name: "email",
+    }
+//Need to figure out how to add a table of contents and a questions section
 ];
 
 // TODO: Create a function to write README file
