@@ -54,6 +54,7 @@ const questions = [
         type: "input",
         message: "What license did your project have?",
         name: "license",
+        choices: ["Apache", "ISC", "MIT", "No License"]
     }
     {
         type: "input",
