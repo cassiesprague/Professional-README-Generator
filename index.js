@@ -13,7 +13,55 @@ const genMkdn = require(".utils/generateMarkdown");
 
 
 // TODO: Create an array of questions for user input
-const questions = [];
+// Below is the questions array that allows users to input their answers. I looked back at the class
+// activities and found how to do the array in 19-Ins_Inquirer-Demo.
+const questions = [
+    {
+        type: "input",
+        message: "",
+        name: "",
+    }
+    {
+        type: "input",
+        message: "",
+        name: "",
+    }
+    {
+        type: "input",
+        message: "",
+        name: "",
+    }
+    {
+        type: "input",
+        message: "",
+        name: "",
+    }
+    {
+        type: "input",
+        message: "",
+        name: "",
+    }
+    {
+        type: "input",
+        message: "",
+        name: "",
+    }
+    {
+        type: "input",
+        message: "",
+        name: "",
+    }
+    {
+        type: "input",
+        message: "",
+        name: "",
+    }
+    {
+        type: "input",
+        message: "",
+        name: "",
+    }
+];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
