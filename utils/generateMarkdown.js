@@ -8,13 +8,13 @@
 // https://opensource.org
 function renderLicenseBadge(license) {
   if (license === "Apache") {
-    return '![License: Apache](https://img.shields.io/badge/License-Apache-blue)(https://opensource.org/license/apache-2-0)'
+    return '![License: Apache](https://img.shields.io/badge/License-Apache-blue)'
   }
   if (license === "ISC") {
-    return '![License: Apache](https://img.shields.io/badge/License-ICS-yellow)(https://opensource.org/license/isc)'
+    return '![License: Apache](https://img.shields.io/badge/License-ICS-yellow)'
   }
   if (license === "MIT") {
-    return '![License: Apache](https://img.shields.io/badge/License-MIT-green)(https://opensource.org/license/mit)'
+    return '![License: Apache](https://img.shields.io/badge/License-MIT-green)'
   }
   if (license === "No Lincese") {
     return ''
@@ -24,7 +24,18 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-
+  if (license === "Apache") {
+    return '![License: Apache](https://opensource.org/license/apache-2-0)'
+  }
+  if (license === "ISC") {
+    return '![License: Apache](https://opensource.org/license/isc)'
+  }
+  if (license === "MIT") {
+    return '![License: Apache](https://opensource.org/license/mit)'
+  }
+  if (license === "No Lincese") {
+    return ''
+  }
 }
 
 // TODO: Create a function that returns the license section of README
