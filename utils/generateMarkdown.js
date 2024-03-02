@@ -8,7 +8,7 @@
 // https://opensource.org
 function renderLicenseBadge(license) {
   if (license === "Apache") {
-    return '![License: Apache](https://img.shields.io/badge/License-Apache-blue)(https://opensource.org/license/apache)'
+    return '![License: Apache](https://img.shields.io/badge/License-Apache-blue)(https://opensource.org/license/apache-2-0)'
   }
   if (license === "ISC") {
     return '![License: Apache](https://img.shields.io/badge/License-ICS-yellow)(https://opensource.org/license/isc)'
