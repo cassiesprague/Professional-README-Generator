@@ -8,7 +8,6 @@
 
 const inquirer = require("inquirer");
 const fs = require("fs");
-const utils = require("util");
 const genMkdn = require("./utils/generateMarkdown.js");
 
 
@@ -44,6 +43,11 @@ const questions = [
         type: "input",
         message: "What are the instructions and examples for usage?",
         name: "usage",
+    },
+    {
+        type: "input",
+        message: "Would you like to include a screenshot for Usage? Use ![alt text](assets/images/screenshot.png)",
+        name: "screenshot",
     },
     {
         type: "input",
@@ -86,7 +90,6 @@ const questions = [
         message: "What is your email address?",
         name: "email",
     }
-//Need to figure out how to add a table of contents and a questions section
 ];
 
 // TODO: Create a function to write README file
