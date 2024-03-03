@@ -55,6 +55,49 @@ function renderLicenseSection(license) {
 function generateMarkdown(data) {
   return `# ${data.title}
 
+## Description
+- ${data.description}
+
+## Table of Contents
+
+-[Installation](#installation)
+-[Usage](usage)
+-[Credits](credits)
+-[License](license)
+-[Badges](badges)
+-[Features](features)
+-[Contributing](contributing)
+-[Tests](tests)
+-[Questions](questions)
+
+## Installation
+- ${data.installation}
+
+## Usage
+- ${data.usage}
+
+## Credits
+- ${data.credits}
+
+## License
+- ${renderLicense(data.license)}
+
+## Badges
+- ${data.badges}
+
+## Features
+- ${data.features}
+
+## Contributing
+- ${data.contributing}
+
+## Tests
+- ${data.tests}
+
+## Questions
+For any questions about this repository, feel free to contact me through the following link to GitHub or to my listed email. Thank you!
+- ${data.username}
+- ${data.email}
 `;
 }
 
