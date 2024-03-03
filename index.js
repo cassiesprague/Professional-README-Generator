@@ -18,7 +18,8 @@ const genMkdn = require("./utils/generateMarkdown.js");
 // the moment.
 // https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 
-const questions = [
+inquirer
+    .prompt( 
     {
         type: "input",
         message: "What is the title of your project?",
@@ -28,11 +29,6 @@ const questions = [
         type: "input",
         message: "What is a short description of your project? Explain what the motivation was of your project and why you built it.",
         name: "description",
-    },
-    {
-        type: "input",
-        message: "",
-        name: "",
     },
     {
         type: "input",
@@ -90,7 +86,7 @@ const questions = [
         message: "What is your email address?",
         name: "email",
     }
-];
+    );
 
 // TODO: Create a function to write README file
 // Below is the link to the video I used to help me get this function. I am currently not sure if
