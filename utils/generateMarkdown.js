@@ -33,7 +33,7 @@ function renderLicenseLink(license) {
   if (license === "MIT") {
     return '![License: Apache](https://opensource.org/license/mit)'
   }
-  if (license === "No Lincese") {
+  if (license === "No License") {
     return ''
   }
 }
