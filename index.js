@@ -8,7 +8,7 @@
 
 const inquirer = require("inquirer");
 const fs = require("fs");
-const genMkdn = require("./utils/generateMarkdown.js");
+const generateMarkdown = require("./utils/generateMarkdown.js");
 
 
 // TODO: Create an array of questions for user input
@@ -18,8 +18,7 @@ const genMkdn = require("./utils/generateMarkdown.js");
 // the moment.
 // https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 
-inquirer
-    .prompt( 
+inquirer.prompt([
     {
         type: "input",
         message: "What is the title of your project?",
@@ -85,9 +84,11 @@ inquirer
         type: "input",
         message: "What is your email address?",
         name: "email",
-    }
-    );
-
+    },
+])
+.then(function(answer){
+    console.log(answer);
+});
 // TODO: Create a function to write README file
 // Below is the link to the video I used to help me get this function. I am currently not sure if
 // this is even going to workerData, but I will try it out. If it doesnt work I will try another way.
