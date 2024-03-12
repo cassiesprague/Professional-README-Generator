@@ -7,7 +7,8 @@
 // https://www.w3schools.com/nodejs/nodejs_url.asp
 
 const inquirer = require("inquirer");
-const fs = require("fs");
+const fs = require("fs/promises");
+// const path = require("path");
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
 
@@ -18,7 +19,8 @@ const generateMarkdown = require("./utils/generateMarkdown.js");
 // the moment.
 // https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 
-inquirer.prompt([
+inquirer
+.prompt([
     {
         type: "input",
         message: "What is the title of your project?",
@@ -50,7 +52,7 @@ inquirer.prompt([
         name: "credits",
     },
     {
-        type: "input",
+        type: "list",
         message: "What license did your project have?",
         name: "license",
         choices: ["Apache", "ISC", "MIT", "No License"]
@@ -86,26 +88,38 @@ inquirer.prompt([
         name: "email",
     },
 ])
-.then(function(answer){
-    console.log(answer);
-});
+// .then((data) => {
+//     const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
+
+//     fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
+//       err ? console.log(err) : console.log('Success!')
+//     );
+//   });
+
+
+// .then((answers) => {
+//     console.log(answers);
+// });
 // TODO: Create a function to write README file
 // Below is the link to the video I used to help me get this function. I am currently not sure if
 // this is even going to workerData, but I will try it out. If it doesnt work I will try another way.
 // https://www.youtube.com/watch?v=9YivEQFpmHQ
 
-function writeToFile(fileName, data) {
-    return fs.writeFileSync(util.join(process.cwd().fileName).data);
-}
+
+// function writeToFile(fileName, data) {
+//     return fs.writeFileSync(path.join(process.cwd().fileName).data);
+// }
 
 // TODO: Create a function to initialize app
 //Used same link as above to try to get this to work. Still working on
-function init() {
-    inquirer.createPromptModule(questions).then((responses) => {
-        console.log("Creating Professional README.md File");
-        writeToFile("PRF", generateMarkdown({...responces}));
-    })
-}
+// function init() {
+// inquirer.prompt(questions).then((answers) => {
+//         console.log("Creating Professional README.md File");
+//         writeToFile("PRF", generateMarkdown({...answers}));
+// });
+// }
+
 
 // Function call to initialize app
-init();
+// init();
+// inquirer.prompt()
