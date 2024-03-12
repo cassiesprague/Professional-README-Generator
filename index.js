@@ -7,8 +7,8 @@
 // https://www.w3schools.com/nodejs/nodejs_url.asp
 
 const inquirer = require("inquirer");
-const fs = require("fs/promises");
-// const path = require("path");
+const fs = require("fs");
+const path = require("path");
 const generateMarkdown = require("./utils/generateMarkdown.js");
 
 
@@ -19,8 +19,7 @@ const generateMarkdown = require("./utils/generateMarkdown.js");
 // the moment.
 // https://coding-boot-camp.github.io/full-stack/github/professional-readme-guide
 
-inquirer
-.prompt([
+const questions = [
     {
         type: "input",
         message: "What is the title of your project?",
@@ -87,7 +86,8 @@ inquirer
         message: "What is your email address?",
         name: "email",
     },
-])
+];
+
 // .then((data) => {
 //     const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
 
@@ -95,6 +95,13 @@ inquirer
 //       err ? console.log(err) : console.log('Success!')
 //     );
 //   });
+
+// const writeToFile = (fileName, data) => {
+//     fs.writeFile(fileName, data, (err) =>
+//         err ? console.error(err) : console.log(success)
+//     );
+// }
+
 
 
 // .then((answers) => {
@@ -105,7 +112,11 @@ inquirer
 // this is even going to workerData, but I will try it out. If it doesnt work I will try another way.
 // https://www.youtube.com/watch?v=9YivEQFpmHQ
 
-
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+    err ? console.log(err) : console.log('Created README.md file')
+    );
+}
 // function writeToFile(fileName, data) {
 //     return fs.writeFileSync(path.join(process.cwd().fileName).data);
 // }
@@ -118,8 +129,13 @@ inquirer
 //         writeToFile("PRF", generateMarkdown({...answers}));
 // });
 // }
-
+function init() {
+    inquirer.prompt(questions).then((answer) => {
+        const readMePage = generateMarkdown(answer);
+        writeToFile("README.md",readMePage);
+    });
+}
 
 // Function call to initialize app
-// init();
+init();
 // inquirer.prompt()
