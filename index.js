@@ -27,8 +27,13 @@ const questions = [
     },
     {
         type: "input",
-        message: "What is a short description of your project? Explain what the motivation was of your project and why you built it.",
+        message: "What is a short description of your project?",
         name: "description",
+    },
+    {
+        type: "input",
+        message: "What was the motivation was of your project and why did you built it?",
+        name: "motivation",
     },
     {
         type: "input",

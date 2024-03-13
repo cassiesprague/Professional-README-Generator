@@ -57,6 +57,7 @@ function generateMarkdown(data) {
 
 ## Description
 - ${data.description}
+-${data.motivation}
 
 ## Table of Contents
 
