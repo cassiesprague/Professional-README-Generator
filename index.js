@@ -83,7 +83,7 @@ const questions = [
     },
     {
         type: "input",
-        message: "What is your GitHub username?",
+        message: "Below put the link to your GitHub page.",
         name: "username",
     },
     {
