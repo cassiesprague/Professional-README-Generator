@@ -88,47 +88,25 @@ const questions = [
     },
 ];
 
-// .then((data) => {
-//     const filename = `${data.name.toLowerCase().split(' ').join('')}.json`;
-
-//     fs.writeFile(filename, JSON.stringify(data, null, '\t'), (err) =>
-//       err ? console.log(err) : console.log('Success!')
-//     );
-//   });
-
-// const writeToFile = (fileName, data) => {
-//     fs.writeFile(fileName, data, (err) =>
-//         err ? console.error(err) : console.log(success)
-//     );
-// }
-
-
-
-// .then((answers) => {
-//     console.log(answers);
-// });
 // TODO: Create a function to write README file
-// Below is the link to the video I used to help me get this function. I am currently not sure if
-// this is even going to workerData, but I will try it out. If it doesnt work I will try another way.
-// https://www.youtube.com/watch?v=9YivEQFpmHQ
+// Below is the link to the website that finally helped make the correct function to write the readme file. I have tried lots of 
+// different ones but many of them only allowed me to view the first question but not answer it or wouldnt even let me do that. So 
+// the function below taked the data from the questions above and console logs that it created the file or if it had an error it will 
+// log that there was an error.
+// https://tecadmin.net/node-js-write-to-file-fs-writefile-function/
+
 
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, (err) =>
     err ? console.log(err) : console.log('Created README.md file')
     );
 }
-// function writeToFile(fileName, data) {
-//     return fs.writeFileSync(path.join(process.cwd().fileName).data);
-// }
 
 // TODO: Create a function to initialize app
-//Used same link as above to try to get this to work. Still working on
-// function init() {
-// inquirer.prompt(questions).then((answers) => {
-//         console.log("Creating Professional README.md File");
-//         writeToFile("PRF", generateMarkdown({...answers}));
-// });
-// }
+// Once I was able to finally get the function above to work I was able to take a few guesses about how to get the initalizing function to 
+// work. I went back to some of the previous videos and class lessons to help me figure out the correct function to initalize the pp and get
+// the generate markdown to come in to play as well.
+
 function init() {
     inquirer.prompt(questions).then((answer) => {
         const readMePage = generateMarkdown(answer);
@@ -137,5 +115,5 @@ function init() {
 }
 
 // Function call to initialize app
+//Below calls to initalize the app and this is always to same and has been in many videos, links, and classes
 init();
-// inquirer.prompt()
