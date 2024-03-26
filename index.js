@@ -52,6 +52,11 @@ const questions = [
     },
     {
         type: "input",
+        message: "Would you like to include a video tutorial for Usage? Use ![alt text](assets/images/screenshot.png)",
+        name: "video",
+    },
+    {
+        type: "input",
         message: "If there were any collaborators for this project, list them here. Also list any third-party assets or links you used here.",
         name: "credits",
     },
