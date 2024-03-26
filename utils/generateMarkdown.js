@@ -8,15 +8,15 @@
 // https://opensource.org
 function renderLicenseBadge(license) {
   if (license === "Apache") {
-    return '![License: Apache](https://img.shields.io/badge/License-Apache-blue)'
+    return '![License: Apache](https://img.shields.io/badge/license-Apache-blue.svg)'
   }
   if (license === "ISC") {
-    return '![License: Apache](https://img.shields.io/badge/License-ICS-yellow)'
+    return '![License: Apache](https://img.shields.io/badge/license-ICS-yellow.svg)'
   }
   if (license === "MIT") {
-    return '![License: Apache](https://img.shields.io/badge/License-MIT-green)'
+    return '![License: Apache](https://img.shields.io/badge/license-MIT-green.svg)'
   }
-  if (license === "No Lincese") {
+  if (license === "No License") {
     return ''
   }
 }
@@ -24,82 +24,72 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license === "Apache") {
-    return '![License: Apache](https://opensource.org/license/apache-2-0)'
+  if (license !== "No License") {
+    return '- [License](#license)'
   }
-  if (license === "ISC") {
-    return '![License: Apache](https://opensource.org/license/isc)'
-  }
-  if (license === "MIT") {
-    return '![License: Apache](https://opensource.org/license/mit)'
-  }
-  if (license === "No License") {
     return ''
-  }
 }
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   let licenseText;
-  if (license != "No License"){
-    licenseText = "This project is licensed under the ${selectLicense(license).fullName}; A copy of the license can be found at: ${selectLicense(license).link}"
+  if (license !== "No License"){
+    licenseText = `## License \nThis project is licensed under the ${license} license.`
+    return licenseText
   }
-  else {
-    licenseText = "Not Licensed";
-  }
-  return licenseText;
+  return '';
 }
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+${renderLicenseBadge(data.license)}
 
 ## Description
-- ${data.description}
--${data.motivation}
+${data.description}
+${data.motivation}
 
 ## Table of Contents
 
--[Installation](#installation)
--[Usage](usage)
--[Credits](credits)
--[License](license)
--[Badges](badges)
--[Features](features)
--[Contributing](contributing)
--[Tests](tests)
--[Questions](questions)
+- [Installation](#installation)
+- [Usage](usage)
+- [Credits](credits)
+${renderLicenseLink(data.license)}
+- [Badges](badges)
+- [Features](features)
+- [Contributing](contributing)
+- [Tests](tests)
+- [Questions](questions)
 
 ## Installation
-- ${data.installation}
+${data.installation}
 
 ## Usage
-- ${data.usage}
-- ${data.screenshot}
+${data.usage}
+${data.screenshot}
 
 ## Credits
-- ${data.credits}
+${data.credits}
 
-## License
-- ${renderLicenseLink}
+${renderLicenseSection(data.license)}
 
 ## Badges
-- ${data.badges}
+${data.badges}
 
 ## Features
-- ${data.features}
+${data.features}
 
 ## Contributing
-- ${data.contributing}
+${data.contributing}
 
 ## Tests
-- ${data.tests}
+${data.tests}
 
 ## Questions
 For any questions about this repository, feel free to contact me through the following link to GitHub or to my listed email. Thank you!
-- ${data.username}
-- ${data.email}
+[${data.username}](https://github.com/${data.username})
+${data.email}
 `;
 }
 
