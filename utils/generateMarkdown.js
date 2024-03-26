@@ -41,16 +41,6 @@ function renderLicenseSection(license) {
   return '';
 }
 
-//Decided to put a section for a tutorial video if needed
-function renderVideoSection(video) {
-  let videoText;
-  if (video !== "No Video"){
-    videoText = `## Video \nVideo tutorial for how to operate this app: ${video}`
-    return videoText
-  }
-  return '';
-}
-
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
@@ -83,8 +73,6 @@ ${data.screenshot}
 ${data.credits}
 
 ${renderLicenseSection(data.license)}
-
-${renderVideoSection(video)}
 
 ## Badges
 ${data.badges}
