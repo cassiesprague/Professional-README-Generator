@@ -41,6 +41,24 @@ function renderLicenseSection(license) {
   return '';
 }
 
+//Function for video link
+function renderVideoLink(video) {
+  if (video !== "No Video") {
+    return '- [Video](#video)'
+  }
+    return ''
+}
+
+//Function for video tutorial
+function renderVideoSection(video) {
+  let videoText;
+  if (video !== "No Video"){
+    videoText = `## Tutorial Video \nWatch here for a video tutorial for the app. ${video}`
+    return videoText
+  }
+  return '';
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
@@ -54,14 +72,15 @@ ${data.motivation}
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](usage)
-- [Credits](credits)
+- [Usage](#usage)
+- [Credits](#credits)
 ${renderLicenseLink(data.license)}
-- [Badges](badges)
-- [Features](features)
-- [Contributing](contributing)
-- [Tests](tests)
-- [Questions](questions)
+${renderVideoLink(data.video)}
+- [Badges](#badges)
+- [Features](#features)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
 
 ## Installation
 ${data.installation}
@@ -70,6 +89,8 @@ ${data.installation}
 ${data.usage}
 
 ${data.screenshot}
+
+${renderVideoSection(data.video)}
 
 ## Credits
 ${data.credits}
@@ -91,9 +112,8 @@ ${data.tests}
 ## Questions
 For any questions about this repository, feel free to contact me through the following link to GitHub or to my listed email. Thank you!
 
-[${data.username}](https://github.com/${data.username})
-
-${data.email}
+GitHub: [${data.username}](https://github.com/${data.username})
+Email: ${data.email}
 `;
 }
 
