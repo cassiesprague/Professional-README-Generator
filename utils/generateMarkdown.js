@@ -48,6 +48,7 @@ ${renderLicenseBadge(data.license)}
 
 ## Description
 ${data.description}
+
 ${data.motivation}
 
 ## Table of Contents
@@ -67,6 +68,7 @@ ${data.installation}
 
 ## Usage
 ${data.usage}
+
 ${data.screenshot}
 
 ## Credits
@@ -88,7 +90,9 @@ ${data.tests}
 
 ## Questions
 For any questions about this repository, feel free to contact me through the following link to GitHub or to my listed email. Thank you!
+
 [${data.username}](https://github.com/${data.username})
+
 ${data.email}
 `;
 }

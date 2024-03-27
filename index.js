@@ -47,12 +47,12 @@ const questions = [
     },
     {
         type: "input",
-        message: "Would you like to include a screenshot for Usage? Use ![alt text](assets/images/screenshot.png)",
+        message: "Would you like to include a screenshot for Usage? Use ![alt text](images/screenshot.png)",
         name: "screenshot",
     },
     {
         type: "input",
-        message: "Would you like to include a video tutorial for Usage? Use ![alt text](assets/images/screenshot.png)",
+        message: "Would you like to include a video tutorial for Usage? Put video link here.",
         name: "video",
     },
     {
