@@ -27,7 +27,7 @@ function renderLicenseLink(license) {
   if (license !== "No License") {
     return '- [License](#license)'
   }
-    return ''
+    return '';
 }
 
 // TODO: Create a function that returns the license section of README
@@ -46,14 +46,14 @@ function renderVideoLink(video) {
   if (video !== "No Video") {
     return '- [Video](#video)'
   }
-    return ''
+    return '';
 }
 
 //Function for video tutorial
 function renderVideoSection(video) {
   let videoText;
   if (video !== "No Video"){
-    videoText = `## Tutorial Video \nWatch here for a video tutorial for the app. ${video}`
+    videoText = `## Tutorial Video \nIf there is a video tutorial available for this application, you can watch that video here. ${video}`
     return videoText
   }
   return '';

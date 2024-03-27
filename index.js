@@ -52,7 +52,7 @@ const questions = [
     },
     {
         type: "input",
-        message: "Would you like to include a video tutorial for Usage? Put video link here.",
+        message: "If you would like a to include a video tutorial, insert link here.",
         name: "video",
     },
     {
@@ -88,7 +88,7 @@ const questions = [
     },
     {
         type: "input",
-        message: "Below put the link to your GitHub page.",
+        message: "What is your GitHub username?",
         name: "username",
     },
     {
