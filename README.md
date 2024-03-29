@@ -1,10 +1,10 @@
-# Professional ReadMe Generator
+# E-Commerce Back End
 ![License: Apache](https://img.shields.io/badge/license-MIT-green.svg)
 
 ## Description
-This application allows users to generate a professional readme file with all necessary information including a functioning Table of Contents, section for a video tutorial, and a working link to their GitHub and email.
+This application allows users to manage information for a back end e-commerce website. This application uses the latest technologies such as Express.js API, MySQL, and Sequelize.
 
-My motivation for this application was an easy way to create a ReadMe file from the terminal. Every project has a Readme File, so with this application, users will spend less time trying to write the perfect ReadMe, and more time focusing on the project they are trying to cpmplete. This will save time and increase productivity.
+My motivation for building this application was to make an easy way for companies to manage their back end website to compete with other e-commerce websites.
 
 ## Table of Contents
 
@@ -23,12 +23,12 @@ My motivation for this application was an easy way to create a ReadMe file from 
 To install this Professional ReadMe Generator, you will need to clone this repository into the foler of your choosing. Then navigate to your terminal and open the folder in VS Code or whatever editing application you use.
 
 ## Usage
-Once you have your own copy of the application and have opened it in your editor, open the terminal and run npm install. Once installed, type "node index.js". This will make the questions appear. Once questions are answered, your Professional ReadMe file will be generated!
+Once you have your own copy of the application and have opened it in your editor, open the terminal and run npm install. Once installed, change the env.example to just .env and insert root and your password, then in ther terminal, type "mysql -u root -p" to open the mysql shell, enter your password, "SOURCE db/schema.sql;" and then type "quit" to exit mysql. Then you will want to enter "node seeds, index.js" to seed the project, then run "npm start". Once it has started, open Insomnia and go to your localhost:3001 to start testing it in insomnia.
 
-![screenshot1](images/screenshot1.png) ![screenshot2](images/screenshot2.png) ![screenshot3](images/screenshot3.png) ![screenshot4](images/screenshot4.png)
+![screenshot1](assets/ss1.png) ![screenshot2](assets/ss2.png) ![screenshot3](assets/ss3.png) ![screenshot4](assets/ss4.png) ![screenshot5](assets/ss5.png)
 
 ## Tutorial Video 
-If there is a video tutorial available for this application, you can watch that video here. https://drive.google.com/file/d/1VhlEIvIFQx1msrsztulmOsA64RjQO80Y/view
+If there is a video tutorial available for this application, you can watch that video here. 
 
 ## Credits
 I am the creator of this project. There was no collaborators.
@@ -40,7 +40,7 @@ This project is licensed under the MIT license.
 N/A
 
 ## Features
-This application features a Table of Contents, screenshot section, video section, GitHub link, and email link.
+This application features Insomnia and shows ways to GET, POST, PUT, and DELETE.
 
 ## Contributing
 I am not accepting contributers for this project at the moment.
